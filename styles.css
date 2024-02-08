@@ -1,10 +1,11 @@
-/* Reset some basic elements */
-body, h1, h2, p {
+/* Basic Reset */
+body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-/* Apply a font throughout the page */
+/* Font and Body Styling */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f4f4f4;
@@ -12,105 +13,119 @@ body {
   line-height: 1.6;
 }
 
-/* Style the navbar */
-.navbar-dark {
+/* Navbar Styling */
+.navbar {
   background-color: #000;
+  padding: 1rem 0;
 }
 
 .navbar-brand {
-  font-size: 1.8em;
+  font-size: 2em;
   color: #fff;
+  font-weight: bold;
 }
 
-/* Style the jumbotron */
+/* Header/Jumbotron Styling */
 .jumbotron {
-  padding: 4rem 1rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-high-end-background.jpg') no-repeat center center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg') no-repeat center center / cover;
   color: #fff;
+  padding: 100px 0; /* Increased top and bottom padding */
+  text-align: center;
 }
 
 .jumbotron h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 .jumbotron p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-/* Model container and AR button */
+/* Model Viewer and Buttons Styling */
 .model-container {
   position: relative;
+  text-align: center; /* Center the model viewer */
+}
+
+#ar-button, #nfc-scan-btn {
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 #ar-button {
   position: absolute;
-  top: 20px;
+  top: -40px; /* Position above the model */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.8rem;
-  padding: 0.5rem 1rem;
-  background-color: #444;
+  background-color: #444; /* Dark grey for a subtle look */
   color: #fff;
-  border: none;
-  border-radius: 20px;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 #ar-button:hover {
-  background-color: #666;
-  color: #ffd700;
+  background-color: #555;
+  color: #ddd;
 }
 
-/* Parallax section */
-.parallax-section {
-  color: #000;
-  padding: 50px 0;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+#nfc-scan-btn {
+  background-color: #007bff; /* Bootstrap primary color for consistency */
+  color: #fff;
+  margin-top: 20px; /* Space from the model viewer */
 }
 
-/* Features section */
+#nfc-scan-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Features Section Styling */
+.features-section {
+  padding: 2rem 0;
+}
+
 .features-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
 }
 
-.features-section ul {
-  list-style-type: none;
-  padding-left: 0;
+.features-section p, .features-section li {
+  font-size: 1rem;
 }
 
-.features-section li {
-  padding-left: 2rem;
-  background: url('check-icon.png') no-repeat left center;
-  margin-bottom: 1rem;
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
-  background-color: #222;
+  background-color: #333;
+  color: #ddd;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-footer p, footer a {
+footer a {
   color: #fff;
 }
 
 footer a:hover {
-  color: #ffd700;
+  color: #bbb;
 }
 
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
+  .jumbotron {
+    padding: 60px 0;
+  }
+
   .jumbotron h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .jumbotron p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #ar-button {
-    top: 10px;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.7rem;
+    top: -30px;
   }
 }
