@@ -17,20 +17,21 @@
     </div>
 </nav>
 
-<header class="jumbotron jumbotron-fluid text-center" style="background-image: url('your-high-end-background.jpg'); background-size: cover; background-position: center;">
+<header class="jumbotron jumbotron-fluid text-center">
     <div class="container">
         <h1 class="display-4">The ELYTE Hoodie</h1>
         <p class="lead">Experience fashion with a touch of technology.</p>
-        <model-viewer src="ELYTEWEAR_DRIP_HOODIE.glb" alt="A 3D model of ELYTE Hoodie" ar auto-rotate camera-controls background-color="#455A64" rotation-per-second="60deg" style="width:100%; height: 500px;"></model-viewer>
-        <button id="ar-button" class="btn btn-success btn-lg mt-4">View 3D Model in AR</button>
-        <button id="nfc-scan-btn" class="btn btn-primary btn-lg mt-4">Register Your Hoodie</button>
+        <div class="model-container">
+            <model-viewer src="ELYTEWEAR_DRIP_HOODIE.glb" alt="A 3D model of ELYTE Hoodie" ar auto-rotate camera-controls background-color="#455A64" rotation-per-second="60deg" style="width:100%; height: 500px;"></model-viewer>
+            <button id="ar-button" class="btn">View Hoodie in 3D</button>
+        </div>
     </div>
 </header>
 
-<div class="parallax-section" style="background-image: url('your-parallax-background.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
+<div class="parallax-section">
     <div class="container text-center py-5">
-        <h2 class="text-white">Join the Tech-Fashion Revolution</h2>
-        <p class="text-white-50">Be part of an exclusive group experiencing the future of fashion with integrated technology.</p>
+        <h2>Join the Tech-Fashion Revolution</h2>
+        <p>Be part of an exclusive group experiencing the future of fashion with integrated technology.</p>
     </div>
 </div>
 
@@ -62,11 +63,6 @@
 document.getElementById('ar-button').addEventListener('click', function() {
     const modelViewer = document.querySelector('model-viewer');
     modelViewer.activateAR();
-});
-
-document.getElementById('nfc-scan-btn').addEventListener('click', function() {
-    alert("Please hold your phone close to the NFC tag on your hoodie.");
-    // Integrate your NFC scanning logic here.
 });
 </script>
 
