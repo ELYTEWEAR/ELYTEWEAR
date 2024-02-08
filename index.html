@@ -1,131 +1,73 @@
-/* Basic Reset */
-body, h1, h2, h3, p, ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELYTE Hoodie with NFC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
+</head>
+<body>
 
-/* Font and Body Styling */
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-}
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">ELYTEWEAR</a>
+    </div>
+</nav>
 
-/* Navbar Styling */
-.navbar {
-  background-color: #000;
-  padding: 1rem 0;
-}
+<header class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+        <h1 class="display-4">The ELYTE Hoodie</h1>
+        <p class="lead">Experience fashion with a touch of technology.</p>
+        <div class="model-container">
+            <model-viewer src="ELYTEWEAR_DRIP_HOODIE.glb" alt="A 3D model of ELYTE Hoodie" ar auto-rotate camera-controls background-color="#455A64" rotation-per-second="60deg" style="width:100%; height: 500px;"></model-viewer>
+            <button id="ar-button" class="btn">View Hoodie in 3D</button>
+        </div>
+    </div>
+</header>
 
-.navbar-brand {
-  font-size: 2em;
-  color: #fff;
-  font-weight: bold;
-}
+<div class="parallax-section">
+    <div class="container text-center py-5">
+        <h2>Join the Tech-Fashion Revolution</h2>
+        <p>Be part of an exclusive group experiencing the future of fashion with integrated technology.</p>
+    </div>
+</div>
 
-/* Header/Jumbotron Styling */
-.jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg') no-repeat center center / cover;
-  color: #fff;
-  padding: 100px 0; /* Increased top and bottom padding */
-  text-align: center;
-}
+<section class="features-section container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Features</h2>
+            <p>Discover the innovative features of the ELYTE Hoodie:</p>
+            <ul>
+                <li>High-quality material for comfort and durability.</li>
+                <li>Embedded NFC tag for registration and exclusive content.</li>
+                <li>Stylish design for everyday wear.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-.jumbotron h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
+<footer class="bg-dark text-light text-center p-3 mt-5">
+    <div class="container">
+        <p>Connect with us on social media</p>
+        <a href="#" class="text-light mr-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-light mr-2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-light mr-2"><i class="fab fa-instagram"></i></a>
+        <p class="mt-3">&copy; 2024 ELYTEWEAR. All Rights Reserved.</p>
+    </div>
+</footer>
 
-.jumbotron p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
+<script>
+document.getElementById('ar-button').addEventListener('click', function() {
+    const modelViewer = document.querySelector('model-viewer');
+    modelViewer.activateAR();
+});
+</script>
 
-/* Model Viewer and Buttons Styling */
-.model-container {
-  position: relative;
-  text-align: center; /* Center the model viewer */
-}
-
-#ar-button, #nfc-scan-btn {
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-#ar-button {
-  position: absolute;
-  top: -40px; /* Position above the model */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #444; /* Dark grey for a subtle look */
-  color: #fff;
-}
-
-#ar-button:hover {
-  background-color: #555;
-  color: #ddd;
-}
-
-#nfc-scan-btn {
-  background-color: #007bff; /* Bootstrap primary color for consistency */
-  color: #fff;
-  margin-top: 20px; /* Space from the model viewer */
-}
-
-#nfc-scan-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Features Section Styling */
-.features-section {
-  padding: 2rem 0;
-}
-
-.features-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.features-section p, .features-section li {
-  font-size: 1rem;
-}
-
-/* Footer Styling */
-footer {
-  background-color: #333;
-  color: #ddd;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a:hover {
-  color: #bbb;
-}
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .jumbotron {
-    padding: 60px 0;
-  }
-
-  .jumbotron h1 {
-    font-size: 2.5rem;
-  }
-
-  .jumbotron p {
-    font-size: 1rem;
-  }
-
-  #ar-button {
-    top: -30px;
-  }
-}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
