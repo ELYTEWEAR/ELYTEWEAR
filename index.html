@@ -21,7 +21,8 @@
     <div class="container">
         <h1 class="display-4">The ELYTE Hoodie</h1>
         <p class="lead">Experience fashion with a touch of technology.</p>
-        <model-viewer src="ELYTEWEAR_DRIP_HOODIE.glb" alt="A 3D model of ELYTE Hoodie" ar shadow-intensity="1" auto-rotate camera-controls background-color="#455A64" style="width:100%; height: 500px;"></model-viewer>
+        <model-viewer src="ELYTEWEAR_DRIP_HOODIE.glb" alt="A 3D model of ELYTE Hoodie" ar auto-rotate camera-controls background-color="#455A64" rotation-per-second="60deg" style="width:100%; height: 500px;"></model-viewer>
+        <button id="ar-button" class="btn btn-success btn-lg mt-4">View 3D Model in AR</button>
         <button id="nfc-scan-btn" class="btn btn-primary btn-lg mt-4">Register Your Hoodie</button>
     </div>
 </header>
@@ -58,6 +59,11 @@
 </footer>
 
 <script>
+document.getElementById('ar-button').addEventListener('click', function() {
+    const modelViewer = document.querySelector('model-viewer');
+    modelViewer.activateAR();
+});
+
 document.getElementById('nfc-scan-btn').addEventListener('click', function() {
     alert("Please hold your phone close to the NFC tag on your hoodie.");
     // Add your NFC scanning logic here
