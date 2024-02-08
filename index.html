@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELYTE NFC Hoodie</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
+    <title>ELYTE Hoodie with NFC</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Make sure you have a styles.css or remove this line if not -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
+    <style>
+        model-viewer {
+            width: 100%;
+            height: 500px; /* Adjust as needed */
+        }
+    </style>
 </head>
 <body>
 
@@ -14,31 +21,29 @@
 </nav>
 
 <div class="jumbotron jumbotron-fluid text-center">
-    <h1 class="display-4">The ELYTE NFC Hoodie</h1>
-    <p class="lead">A new era of fashion technology.</p>
-    <!-- Model Viewer to display 3D model -->
-    <model-viewer src="https://github.com/ELYTEWEAR/ELYTEWEAR/raw/main/ELYTEWEARDRIPHOODIE.glb" 
-                  ios-src="https://github.com/ELYTEWEAR/ELYTEWEAR/raw/main/ELYTEWEARDRIPHOODIE.glb"
-                  alt="3D model of ELYTE Hoodie" 
-                  ar ar-modes="webxr scene-viewer quick-look" 
-                  environment-image="neutral" 
-                  auto-rotate camera-controls 
-                  shadow-intensity="1">
-    </model-viewer>
+    <h1 class="display-4">The ELYTE Hoodie</h1>
+    <p class="lead">Experience fashion with a touch of technology.</p>
+    <!-- Update the 'src' with the path to your 3D model file -->
+    <model-viewer src="ELYTEWEAR_DRIP_HOODIE.glb" alt="A 3D model of ELYTE Hoodie" ar auto-rotate camera-controls background-color="#455A64"></model-viewer>
     <button id="nfc-scan-btn" class="btn btn-primary btn-lg mt-4">Register Your Hoodie</button>
 </div>
 
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
-            <h2>Discover the ELYTE Hoodie</h2>
-            <p>Integrating style with cutting-edge technology, the ELYTE Hoodie comes with an embedded NFC tag, opening a gateway to digital content and exclusive experiences.</p>
+            <h2>Features</h2>
+            <p>Discover the innovative features of the ELYTE Hoodie:</p>
+            <ul>
+                <li>High-quality material for comfort and durability.</li>
+                <li>Embedded NFC tag for registration and exclusive content.</li>
+                <li>Stylish design for everyday wear.</li>
+            </ul>
         </div>
     </div>
 </div>
 
 <footer class="bg-dark text-light text-center p-3 mt-5">
-    <p>Stay Connected</p>
+    <p>Connect with us on social media</p>
     <a href="#" class="text-light mr-2"><i class="fab fa-facebook-f"></i></a>
     <a href="#" class="text-light mr-2"><i class="fab fa-twitter"></i></a>
     <a href="#" class="text-light mr-2"><i class="fab fa-instagram"></i></a>
@@ -47,14 +52,14 @@
 
 <script>
 document.getElementById('nfc-scan-btn').addEventListener('click', function() {
-    // Prompt user to scan their NFC tag
-    alert("Please hold your phone close to the NFC tag on your hoodie to register.");
-    // The actual NFC scanning functionality would need to be implemented in a mobile app or with the Web NFC API (where supported)
+    // Example script to illustrate NFC scan preparation
+    // Note: Actual NFC reading requires additional logic and permissions
+    alert("Please hold your phone close to the NFC tag on your hoodie.");
 });
 </script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
