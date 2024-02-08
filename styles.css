@@ -1,5 +1,5 @@
 /* Basic Reset */
-body, h1, h2, h3, p, ul {
+body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -8,124 +8,87 @@ body, h1, h2, h3, p, ul {
 /* Font and Body Styling */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #000; /* Black background for a sleek look */
+  color: #fff; /* White text for contrast */
   line-height: 1.6;
 }
 
 /* Navbar Styling */
 .navbar {
-  background-color: #000;
-  padding: 1rem 0;
+  background-color: #212529; /* Deep, elegant black */
 }
 
 .navbar-brand {
-  font-size: 2em;
   color: #fff;
   font-weight: bold;
 }
 
 /* Header/Jumbotron Styling */
 .jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg') no-repeat center center / cover;
+  padding-top: 100px; /* Adjusted to avoid navbar overlap */
+  padding-bottom: 50px; /* Added space below the model viewer */
+  background-color: #000; /* Consistent black background */
   color: #fff;
-  padding: 100px 0; /* Increased top and bottom padding */
   text-align: center;
 }
 
-.jumbotron h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.jumbotron p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-/* Model Viewer and Buttons Styling */
-.model-container {
-  position: relative;
-  text-align: center; /* Center the model viewer */
-}
-
-#ar-button, #nfc-scan-btn {
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-#ar-button {
-  position: absolute;
-  top: -40px; /* Position above the model */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #444; /* Dark grey for a subtle look */
-  color: #fff;
-}
-
-#ar-button:hover {
-  background-color: #555;
-  color: #ddd;
+/* Button Styling */
+.btn {
+  font-weight: bold;
+  border-radius: 25px; /* Rounded edges for a modern look */
+  transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
 #nfc-scan-btn {
-  background-color: #007bff; /* Bootstrap primary color for consistency */
+  margin-top: 20px; /* Space above the main call-to-action button */
+  padding: 0.75rem 1.5rem; /* Larger padding for emphasis */
+  background-color: #007bff; /* Primary blue for visibility */
   color: #fff;
-  margin-top: 20px; /* Space from the model viewer */
 }
 
 #nfc-scan-btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Parallax Section Styling */
+.parallax-section {
+  color: #000; /* Black text for readability */
+  padding: 50px 0; /* Top and bottom padding */
+  background-size: cover;
+  background-position: center;
 }
 
 /* Features Section Styling */
 .features-section {
-  padding: 2rem 0;
+  padding: 2rem 0; /* Top and bottom padding */
 }
 
 .features-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.2rem; /* Larger font size for feature titles */
+  margin-bottom: 1.5rem; /* Space below the title */
 }
 
 .features-section p, .features-section li {
-  font-size: 1rem;
+  font-size: 1rem; /* Standard font size for readability */
 }
 
 /* Footer Styling */
 footer {
-  background-color: #333;
-  color: #ddd;
-  padding: 1rem 0;
-  text-align: center;
+  background-color: #333; /* Darker footer for contrast */
+  color: #ddd; /* Light grey text for readability */
+  padding: 1rem 0; /* Top and bottom padding */
 }
 
 footer a {
-  color: #fff;
+  color: #fff; /* White links for contrast */
 }
 
 footer a:hover {
-  color: #bbb;
+  color: #bbb; /* Grey on hover for a subtle effect */
 }
 
-/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   .jumbotron {
-    padding: 60px 0;
-  }
-
-  .jumbotron h1 {
-    font-size: 2.5rem;
-  }
-
-  .jumbotron p {
-    font-size: 1rem;
-  }
-
-  #ar-button {
-    top: -30px;
+    padding-top: 80px; /* Less padding on smaller screens */
   }
 }
