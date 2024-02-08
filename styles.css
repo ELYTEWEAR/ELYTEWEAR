@@ -6,51 +6,72 @@ body, h1, h2, p {
 
 /* Apply a font throughout the page */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: 'Montserrat', sans-serif; /* Luxurious and modern font */
+  background-color: #f4f4f4; /* Soft background color */
+  color: #333; /* Dark grey for sophisticated text */
   line-height: 1.6;
 }
 
 /* Style the navbar */
 .navbar-dark {
-  background-color: #333;
+  background-color: #000; /* True black for a sleek look */
 }
 
 .navbar-brand {
   font-size: 1.8em;
-  color: #f4f4f4;
+  color: #fff; /* Bright white for contrast */
+  font-weight: bold; /* Make the brand name pop */
 }
 
 /* Style the jumbotron */
 .jumbotron {
-  background: #333 url('your-image-url.jpg') no-repeat center center / cover;
-  color: #f4f4f4;
-  padding: 2rem 1rem;
+  background: #000 url('your-image-url.jpg') no-repeat center center / cover; /* Use a high-quality, stylish background image */
+  color: #fff; /* White text for readability */
+  padding: 4rem 1rem; /* Increase padding for a more dramatic effect */
 }
 
 .jumbotron h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 4rem; /* Larger font size for the main title */
+  margin-bottom: 2rem; /* More space below the title */
 }
 
 .jumbotron p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem; /* Slightly larger paragraph text */
+  margin-bottom: 2rem; /* More space below the paragraph */
 }
 
-/* Style the 'Register Your Hoodie' button */
+/* Button Styles */
+.btn {
+  border-radius: 25px; /* Rounded buttons for a modern feel */
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
+}
+
+/* AR Button Styles */
+#ar-button {
+  background-color: #444; /* Dark grey for a muted, elegant button */
+  color: #fff; /* White text for contrast */
+  border: none; /* No border for a cleaner look */
+  padding: 1rem 2.5rem; /* Larger padding for a wider button */
+}
+
+#ar-button:hover {
+  background-color: #666; /* Lighten the button on hover */
+  color: #ffd700; /* Gold color text for a luxury feel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* NFC Scan Button Styles */
 #nfc-scan-btn {
-  background: #e8491d;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  color: #f4f4f4;
-  cursor: pointer;
+  background-color: #fff; /* White background for a clean, elegant button */
+  color: #000; /* Black text for a classic look */
+  border: 2px solid #000; /* Black border for definition */
 }
 
 #nfc-scan-btn:hover {
-  background: #333;
+  background-color: #000; /* Invert colors on hover */
+  color: #fff; /* White text for contrast */
+  border-color: #fff; /* White border to maintain the inverted look */
 }
 
 /* Style the features section */
@@ -59,38 +80,41 @@ body {
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Larger font size for headings */
+  margin-bottom: 2rem; /* More space below headings */
+  font-weight: 700; /* Bold headings for impact */
 }
 
 ul {
-  list-style: none;
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
 }
 
 li {
-  background: url('check-icon.png') no-repeat left center;
-  padding-left: 2rem;
-  margin-bottom: 0.5rem;
+  background: url('check-icon.png') no-repeat left center; /* Use a luxurious icon for list items */
+  padding-left: 2.5rem; /* Adjust padding to align text nicely with the icon */
+  margin-bottom: 1rem; /* More space between list items */
+  font-size: 1.2rem; /* Slightly larger list item text */
 }
 
 /* Style the footer */
 footer {
-  background-color: #333;
-  color: #f4f4f4;
+  background-color: #222; /* Darker footer for contrast */
+  color: #fff; /* White text for readability */
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0; /* Increase padding for a taller footer */
 }
 
 footer p, footer a {
-  color: #f4f4f4;
+  color: #fff; /* Ensure all text is white for consistency */
 }
 
 footer a:hover {
-  color: #e8491d;
+  color: #ffd700; /* Gold hover color for links for a touch of luxury */
 }
 
-/* Add responsiveness to the model viewer */
+/* Responsive Model Viewer */
 model-viewer {
   max-width: 100%;
-  height: auto;
+  height: auto; /* Ensure the model viewer scales nicely on all devices */
 }
